@@ -9,13 +9,13 @@
 <ion-content>
     <ion-grid>
         <ion-row>
-            <ion-col size="6" *ngFor="let Foto of photoService.photos; index as position">
-                <ion-img src="{{ photo.base64 ? photo.base64 : photo.webviewPath }}"></ion-img>
+            <ion-col size="6" *ngFor="let Foto of PhotoService.photos; index as position">
+                <ion-img src="{{ Foto.base64 ? Foto.base64 : Foto.webviewPath }}"></ion-img>
             </ion-col>
         </ion-row>
     </ion-grid>
     <ion-fab vertical="bottom" horizontal="center" slot="fixed">
-        <ion-fab-button (click)="photoService.addNewToGallery()">
+        <ion-fab-button (click)="PhotoService.tirarfoto()">
             <ion-icon name="camera">
 
             </ion-icon>
